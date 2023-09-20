@@ -72,9 +72,9 @@ class UsuarioController extends Controller
         if ($this->request->isPost) {
             if ($model->load($this->request->post())) {
                 if ($model->validate()){
-                    $model->username=$_POST['Usuario']['username'];
-                    $model->nombre=$_POST['Usuario']['name'];
-                    $model->password=password_hash($_POST['Usuario']['password'], PASSWORD_BCRYPT);
+                    $model->username=$_POST['usuario']['username'];
+                    $model->name=$_POST['usuario']['name'];
+                    $model->password=password_hash($_POST['usuario']['password'], PASSWORD_BCRYPT);
                     if($model->save()){
                         return $this->redirect(['view', 'id' => $model->id]);   
 
