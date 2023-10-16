@@ -18,8 +18,8 @@ services:
           POSTGRES_USER: ${DATABASE_USER}
           POSTGRES_DB: ${DATABASE_NAME}
           POSTGRES_HOST: ${DATABASE_HOST}
-          PHP_USER_ID: 1000
-          producion: ${producion}
+          PHP_USER_ID: ${PHP_USER_ID}
+          PRODUCCION: ${PRODUCCION}
     volumes:
       - ./backend/composer/cache:/root/.composer/cache:delegated
       - ./backend/basic:/app:delegated
